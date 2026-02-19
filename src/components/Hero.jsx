@@ -2,9 +2,9 @@ import { storyblokEditable } from '@storyblok/react/rsc';
 
 const Hero = ({ blok }) => {
 	return (
-		<div className="hero" style={{ backgroundImage: `url(${blok.heroimage.filename})`, backgroundColor: blok.herobgcolor.color }} {...storyblokEditable(blok)}>
-			<span>{blok.herohead}</span>
-            <h1>{blok.herosubhead}</h1>
+		<div className={`hero ${blok.extraclass || ''}`} style={{ backgroundImage: `url(${blok.heroimage.filename})`, backgroundColor: blok.herobgcolor.color }} {...storyblokEditable(blok)}>
+			<h2>{blok.herohead}</h2>
+            <h3>{blok.herosubhead}</h3>
 		</div>
 	);
 };
