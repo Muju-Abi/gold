@@ -18,7 +18,11 @@
 }
 .home-hero h2 {
     color: gold;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
 }
 .home-hero h3 {
     color: gold;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: 300;
 }
