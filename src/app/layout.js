@@ -1,5 +1,11 @@
 import './globals.css';
 import StoryblokProvider from '@/components/StoryblokProvider';
+import { Roboto } from 'next/font/google'
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
 	title: 'Create Next App',
@@ -10,7 +16,7 @@ export default function RootLayout({ children }) {
 	const currentYear = new Date().getFullYear();
 	return (
 		<StoryblokProvider>
-			<html lang="en">
+			<html lang="en" className={roboto.className}>
 				<body className="flex flex-col min-h-screen justify-between">
 					{children}
 					<footer>All rights reserved © {currentYear} </footer>
