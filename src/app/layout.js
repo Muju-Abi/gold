@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
 	return (
 		<StoryblokProvider>
 			<html lang="en">
-				<body>
+				<body className="flex flex-col min-h-screen justify-between">
 					{children}
 					<footer>All rights reserved © {currentYear} </footer>
 				</body>
