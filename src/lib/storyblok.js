@@ -7,6 +7,8 @@ import Carousel from '@/components/Carousel';
 import CarouselItem from '@/components/CarouselItem';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
+// import { getStoryblokApi } from "@storyblok/react/rsc";
+
 export const getStoryblokApi = storyblokInit({
 	accessToken: process.env.STORYBLOK_DELIVERY_API_TOKEN,
 	use: [apiPlugin],
@@ -28,3 +30,11 @@ export const getStoryblokApi = storyblokInit({
 			: undefined,
 	},
 });
+
+export async function getGlobalConfig() {
+  const storyblokApi = getStoryblokApi();
+  const { data } = await storyblokApi.get(`cdn/stories/config`, {
+    version: "draft", // or 'published'
+  });
+  return data.story.content;
+}
