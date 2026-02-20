@@ -3,9 +3,12 @@
 import { storyblokEditable } from '@storyblok/react/rsc';
 import { StoryblokComponent } from '@storyblok/react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 
 const Carousel = ({ blok }) => {
-    const [emblaRef] = useEmblaCarousel({ loop: true });
+    const [emblaRef] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ delay: 4000, stopOnInteraction: false })
+  ]);
 
 	return (
 		<div className="carousel embla overflow-hidden" ref={emblaRef} {...storyblokEditable(blok)}>
