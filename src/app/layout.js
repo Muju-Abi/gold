@@ -1,9 +1,18 @@
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css';
 import StoryblokProvider from '@/components/StoryblokProvider';
-import { Roboto } from 'next/font/google'
 
-const roboto = Roboto({
+// Initialize the primary font
+const inter = Inter({
   subsets: ['latin'],
+  variable: '--font-inter', // This is the CSS variable name
+  display: 'swap',
+})
+
+// Initialize the secondary font
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
   display: 'swap',
 })
 
@@ -16,7 +25,7 @@ export default function RootLayout({ children }) {
 	const currentYear = new Date().getFullYear();
 	return (
 		<StoryblokProvider>
-			<html lang="en" className={roboto.className}>
+			<html lang="en" className={`${inter.variable} ${playfair.variable}`}>
 				<body className="flex flex-col min-h-screen justify-between">
 					{children}
 					<footer>All rights reserved © {currentYear} </footer>

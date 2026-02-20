@@ -7,7 +7,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}", // If using /src directory
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // 'sans' will now use Inter
+        sans: ['var(--font-inter)', 'ui-sans-serif', 'system-ui'],
+        // 'serif' or a custom name like 'display'
+        display: ['var(--font-playfair)', 'serif'],
+      },
+    },
   },
   plugins: [],
 }
