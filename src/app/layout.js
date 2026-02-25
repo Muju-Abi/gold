@@ -34,9 +34,6 @@ export default function RootLayout({ children }) {
 				<body className="flex flex-col min-h-screen justify-between">
 					<Header menuItems={config.header_menu} />
 					<main className="flex-grow">{children}</main>
-					<footer className="p-4 text-center">
-						All rights reserved © {currentYear}
-					</footer>
 					<Footer menuItems={config.footer_menu} />
 				</body>
 			</html>

@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
+const currentYear = new Date().getFullYear();
 const Footer = ({ menuItems }) => (
   <footer className="bg-white border-b sticky top-0 z-50 p-4">
     <nav className="max-w-7xl mx-auto flex justify-between items-center">
-      <Link href="/" className="text-xl font-bold text-blue-600">Logo</Link>
       <ul className="flex space-x-6">
         {menuItems?.map((item) => (
           <li key={item._uid}>
@@ -13,6 +13,8 @@ const Footer = ({ menuItems }) => (
           </li>
         ))}
       </ul>
+      <p>All rights reserved © {currentYear}</p>
+      <Link href="/" className="text-xl font-bold text-blue-600">MyGold</Link>
     </nav>
   </footer>
 );

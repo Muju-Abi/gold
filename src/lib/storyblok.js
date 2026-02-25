@@ -5,6 +5,7 @@ import Teaser from '@/components/Teaser';
 import Hero from '@/components/Hero';
 import Carousel from '@/components/Carousel';
 import CarouselItem from '@/components/CarouselItem';
+import ImageContentCta from '@/components/ImageContentCta';
 import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
 // import { getStoryblokApi } from "@storyblok/react/rsc";
@@ -20,6 +21,7 @@ export const getStoryblokApi = storyblokInit({
 		hero: Hero,
 		carousel: Carousel,
 		carousel_item: CarouselItem,
+		image_content_cta: ImageContentCta,
 	},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */

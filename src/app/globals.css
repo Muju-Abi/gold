@@ -26,3 +26,12 @@
     font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: 300;
 }
+
+
+.image-content-cta {
+    display: flex;
+    
+}
+.ircl {
+    flex-direction: row-reverse;
+}
